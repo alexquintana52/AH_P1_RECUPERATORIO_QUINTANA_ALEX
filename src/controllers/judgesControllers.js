@@ -2,22 +2,25 @@ import judgesServices from "../services/judgesServices.js"
 import gamesServices from "../services/gamesServices.js"
 
 async function CreateVote(req, res) {
-    const voteData = {
-        "judge_id": req.body.judge_id,
-        "game_id": req.body.game_id,
-        "gameplay": req.body.gameplay,
-        "art": req.body.art,
-        "sound": req.body.sound,
-        "theme": req.body.theme
-    }
 
     const judgeId = await judgesServices.GetJudgeById(req.body.judge_id)
     const gameId = await gamesServices.GetGameById(req.body.game_id)
 
     const vote = {
-        ...voteData,
-        judge_name: judgeId.name,
-        game_name: gameId.name
+        judge: {
+            "judge_id": req.body.judge_id,
+            "judge_name": judgeId.name,
+        },
+        game: {
+            "game_id": req.body.game_id,
+            "game_name": gameId.name,
+        },
+        points: {
+            "gameplay": req.body.gameplay,
+            "art": req.body.art,
+            "sound": req.body.sound,
+            "theme": req.body.theme
+        }
     }
 
     judgesServices.CreateJudgeVote(vote)
