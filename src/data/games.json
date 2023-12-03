@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Tales of Yggdrasil",
+        "genre": "RPG",
+        "members": [
+            "Alan Fuertes",
+            "Jose Baez",
+            "Jennifer Barrios",
+            "Sebastian Bustos"
+        ],
+        "edition": 2023,
+        "total_points": 0
+    },
+    {
+        "name": "Magical Impact",
+        "genre": "Magia",
+        "members": [
+            "Julia Delgado",
+            "Juana Gallardo",
+            "Cesar Prado",
+            "Jesus Echevarria"
+        ],
+        "edition": 2023,
+        "total_points": 0
+    },
+    {
+        "name": "The Forest of Souls",
+        "genre": "Aventuras",
+        "members": [
+            "Rogelio Fariña",
+            "Rafael Rivas",
+            "Luis Cantos",
+            "Marcos Santamaria",
+            "Pablo Belda"
+        ],
+        "edition": 2023,
+        "total_points": 0
+    },
+    {
+        "name": "Speed Cars",
+        "genre": "Carreras",
+        "members": [
+            "Sebastian Lora",
+            "Francisco Olmedo",
+            "Daniela Benitez"
+        ],
+        "edition": 2023,
+        "total_points": 0
+    },
+    {
+        "name": "Mortal Fight",
+        "genre": "Peleas",
+        "members": [
+            "Nicolas Fernandez",
+            "Josue Velasco",
+            "Alvaro Rodriguez",
+            "Ruben Villalba"
+        ],
+        "edition": 2023,
+        "total_points": 0
+    }
+]
