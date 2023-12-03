@@ -10,16 +10,11 @@ async function GetJudgeById(id) {
     return JudgesCollection.findOne({ _id: new ObjectId(id) })
 }
 
-async function GetJudgeVotedGames(id) {
-    return votesServices.GetIdGameVote(id)
-}
-
 async function CreateJudgeVote(voteData) {
     return votesServices.SaveVote(voteData)
 }
 
 export default {
     GetJudgeById,
-    GetJudgeVotedGames,
     CreateJudgeVote
 }

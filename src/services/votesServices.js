@@ -4,16 +4,6 @@ const client = new MongoClient('mongodb://127.0.0.1:27017')
 const db = client.db('AH_2023_P1')
 const VotesCollection = db.collection('votes')
 
-async function GetIdJudgeVote(id) {
-    await client.connect()
-    return VotesCollection.find({ "judge_id": id }).toArray
-}
-
-async function GetIdGameVote(id) {
-    await client.connect()
-    return VotesCollection.find({ "game_id": id }).toArray
-}
-
 async function SaveVote(data) {
     await client.connect()
     
@@ -26,7 +16,5 @@ async function SaveVote(data) {
 }
 
 export default {
-    GetIdJudgeVote,
-    GetIdGameVote,
     SaveVote
 }
