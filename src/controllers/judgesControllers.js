@@ -1,5 +1,6 @@
 import judgesServices from "../services/judgesServices.js"
 import gamesServices from "../services/gamesServices.js"
+import votesServices from "../services/votesServices.js"
 
 async function CreateVote(req, res) {
 
@@ -23,7 +24,7 @@ async function CreateVote(req, res) {
         }
     }
 
-    judgesServices.CreateJudgeVote(vote)
+    votesServices.CreateVote(vote)
         .then(voted => {
             const total_points = req.body.gameplay + req.body.art + req.body.sound + req.body.theme 
             const idGame = req.body.game_id
